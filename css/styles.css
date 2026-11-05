@@ -1,0 +1,159 @@
+/* 1. Colores y fuentes */
+:root {
+  --verde: #005A4E;
+  --verde-oscuro: #003D35;
+  --dorado: #B39461;
+  --fondo-claro: #F4F6F5;
+
+  --fuente-titulos: "Marcellus", Georgia, serif;
+  --fuente-texto: "Lato", Arial, sans-serif;
+
+  --bs-link-color-rgb: 0, 90, 78;
+  --bs-link-hover-color-rgb: 0, 61, 53;
+}
+
+/* 2. Base */
+img { max-width: 100%; height: auto; }
+
+body {
+  font-family: var(--fuente-texto);
+  color: #222;
+  background: #fff;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+}
+
+/* 3. Utilidades */
+.seccion { padding: 3rem 0; }
+.fondo-claro { background: var(--fondo-claro); }
+.fondo-verde { background: var(--verde); color: #fff; }
+
+.antetitulo {
+  color: var(--dorado);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* 4. Botones */
+.btn-aurea {
+  background: var(--verde);
+  color: #fff;
+  border-radius: 0;
+  padding: 0.7rem 1.5rem;
+}
+.btn-aurea:hover { background: var(--verde-oscuro); color: #fff; }
+
+.btn-dorado {
+  background: var(--dorado);
+  color: #fff;
+  border-radius: 0;
+  padding: 0.7rem 1.5rem;
+}
+.btn-dorado:hover { background: #967A4D; color: #fff; }
+
+/* 5. Navbar */
+.navbar-brand {
+  font-family: var(--fuente-titulos);
+  font-size: 1.05rem;
+  color: var(--verde);
+  line-height: 1.1;
+}
+.navbar-brand small {
+  display: block;
+  font-family: var(--fuente-texto);
+  font-size: 0.75rem;
+  color: #666;
+}
+.nav-link:hover, .nav-link.active { color: var(--verde) !important; }
+
+/* 6. Portada */
+.portada {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url("../img/portada.jpg") center / cover;
+  color: #fff;
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+.portada h1 { font-size: 2.4rem; }
+
+/* 7. Buscador de reservas */
+.buscador .form-label { font-size: 0.85rem; }
+.buscador .form-control,
+.buscador .form-select { border-radius: 0; }
+.buscador .btn { padding: 0.375rem 0.75rem; }
+
+/* 8. Datos del hotel */
+.dato {
+  border-top: 2px solid var(--dorado);
+  padding-top: 0.75rem;
+}
+.dato strong { display: block; font-size: 1.4rem; font-family: var(--fuente-titulos); color: var(--verde); }
+
+/* 9. Tarjetas y precios */
+.card { border-radius: 0; }
+.card-img-top { border-radius: 0; }
+.precio { font-size: 1.3rem; color: var(--verde); font-weight: 700; }
+
+/* 10. Historia */
+.anio {
+  font-family: var(--fuente-titulos);
+  font-size: 4rem;
+  color: var(--dorado);
+  line-height: 1;
+}
+
+/* 11. Carrusel */
+.carousel-item { transition: none; }
+
+/* 12. Habitaciones */
+.portada-pequena {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url("../img/portada-habitaciones.jpg") center / cover;
+  color: #fff;
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+.habitacion img { height: 100%; object-fit: cover; }
+.caracteristicas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.precio-noche small { font-size: 0.8rem; font-weight: 400; color: #666; }
+.lista-servicios { columns: 2; padding-left: 1.2rem; }
+
+/* 13. Proceso de reserva */
+.resumen-busqueda { font-size: 0.95rem; }
+.resumen-busqueda strong { display: block; font-size: 1.05rem; }
+.no-disponible { opacity: 0.6; }
+.destacada { border: 2px solid var(--dorado); }
+.badge-dorado { background: var(--dorado); border-radius: 0; }
+.resumen-reserva { top: 6rem; }
+
+#confirmada { display: none; }
+#confirmada:target { display: block; }
+
+/* 14. Pie de página */
+footer { background: var(--verde-oscuro); color: rgba(255, 255, 255, 0.8); }
+footer a { color: #fff; text-decoration: none; }
+footer a:hover { color: var(--dorado); }
+
+/* 15. Tablet y escritorio */
+@media (min-width: 768px) {
+  .navbar-brand { font-size: 1.25rem; }
+  .seccion { padding: 5rem 0; }
+  .portada { padding: 9rem 0 7rem; }
+  .portada h1 { font-size: 3.5rem; }
+  .anio { font-size: 6rem; }
+  .portada-pequena { padding: 6rem 0 4rem; }
+  .lista-servicios { columns: 3; }
+}
