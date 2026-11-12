@@ -14,6 +14,7 @@
 
 /* 2. Base */
 img { max-width: 100%; height: auto; }
+[id] { scroll-margin-top: 3.65rem; }
 
 body {
   font-family: var(--fuente-texto);
@@ -156,4 +157,9 @@ footer a:hover { color: var(--dorado); }
   .anio { font-size: 6rem; }
   .portada-pequena { padding: 6rem 0 4rem; }
   .lista-servicios { columns: 3; }
+}
+
+/* 16. Escritorio */
+@media (min-width: 992px) {
+  [id] { scroll-margin-top: 4.05rem; }
 }

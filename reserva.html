@@ -44,7 +44,7 @@
       <nav aria-label="Pasos de la reserva">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html#reservar">Búsqueda</a></li>
-          <li class="breadcrumb-item"><a href="disponibles.html">Elige habitación</a></li>
+          <li class="breadcrumb-item"><a href="disponibles.html" id="res-volver">Elige habitación</a></li>
           <li class="breadcrumb-item active" aria-current="page">Completar reserva</li>
         </ol>
       </nav>
@@ -66,9 +66,9 @@
             <div class="card-body">
               <h2 class="h5 card-title" id="res-nombre">Doble Deluxe Vistas Museo</h2>
               <ul class="list-unstyled small mb-3">
-                <li><strong>Entrada:</strong> vie 12 mar 2027, desde las 15:00</li>
-                <li><strong>Salida:</strong> dom 14 mar 2027, hasta las 12:00</li>
-                <li><strong>Huéspedes:</strong> 2 adultos</li>
+                <li><strong>Entrada:</strong> <span id="res-entrada">vie 12 mar 2027</span>, desde las 15:00</li>
+                <li><strong>Salida:</strong> <span id="res-salida">dom 14 mar 2027</span>, hasta las 12:00</li>
+                <li><strong>Huéspedes:</strong> <span id="res-huespedes">2 adultos</span></li>
               </ul>
               <table class="table table-sm mb-0">
                 <tbody>
@@ -83,6 +83,10 @@
         <!-- ===== FORMULARIO ===== -->
         <div class="col-12 col-lg-8">
           <form action="#confirmada" method="get">
+            <input type="hidden" name="hab" id="dato-hab">
+            <input type="hidden" name="entrada" id="dato-entrada">
+            <input type="hidden" name="salida" id="dato-salida">
+            <input type="hidden" name="huespedes" id="dato-huespedes">
 
             <section class="bg-white border p-4 mb-4">
               <h2 class="h4 mb-3">Tus datos</h2>
@@ -169,6 +173,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/busqueda.js"></script>
   <script src="js/reserva.js"></script>
 </body>
 </html>

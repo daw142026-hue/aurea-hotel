@@ -41,9 +41,9 @@
   <section class="fondo-verde py-4">
     <div class="container">
       <div class="row g-3 align-items-center resumen-busqueda">
-        <div class="col-6 col-md-3"><span>Entrada</span><strong>Vie 12 mar 2027</strong></div>
-        <div class="col-6 col-md-3"><span>Salida</span><strong>Dom 14 mar 2027</strong></div>
-        <div class="col-6 col-md-3"><span>Huéspedes</span><strong>2 adultos · 2 noches</strong></div>
+        <div class="col-6 col-md-3"><span>Entrada</span><strong id="bus-entrada">vie 12 mar 2027</strong></div>
+        <div class="col-6 col-md-3"><span>Salida</span><strong id="bus-salida">dom 14 mar 2027</strong></div>
+        <div class="col-6 col-md-3"><span>Huéspedes</span><strong id="bus-huespedes">2 adultos · 2 noches</strong></div>
         <div class="col-6 col-md-3 text-md-end">
           <a class="btn btn-outline-light rounded-0" href="index.html#reservar">Modificar</a>
         </div>
@@ -81,10 +81,10 @@
               </ul>
               <div class="mt-auto d-flex flex-wrap justify-content-between align-items-end gap-3">
                 <div>
-                  <p class="small text-secondary mb-0">120 € × 2 noches</p>
-                  <p class="precio mb-0">240 € <small class="fw-normal text-secondary fs-6">total</small></p>
+                  <p class="small text-secondary mb-0 js-desglose">120 € × 2 noches</p>
+                  <p class="precio mb-0"><span class="js-total">240 €</span> <small class="fw-normal text-secondary fs-6">total</small></p>
                 </div>
-                <a class="btn btn-aurea" href="reserva.html?hab=doble-deluxe">Seleccionar</a>
+                <a class="btn btn-aurea js-seleccionar" href="reserva.html?hab=doble-deluxe" data-hab="doble-deluxe" data-precio="120">Seleccionar</a>
               </div>
             </div>
           </div>
@@ -109,10 +109,10 @@
               </ul>
               <div class="mt-auto d-flex flex-wrap justify-content-between align-items-end gap-3">
                 <div>
-                  <p class="small text-secondary mb-0">135 € × 2 noches</p>
-                  <p class="precio mb-0">270 € <small class="fw-normal text-secondary fs-6">total</small></p>
+                  <p class="small text-secondary mb-0 js-desglose">135 € × 2 noches</p>
+                  <p class="precio mb-0"><span class="js-total">270 €</span> <small class="fw-normal text-secondary fs-6">total</small></p>
                 </div>
-                <a class="btn btn-aurea" href="reserva.html?hab=vistas-museo">Seleccionar</a>
+                <a class="btn btn-aurea js-seleccionar" href="reserva.html?hab=vistas-museo" data-hab="vistas-museo" data-precio="135">Seleccionar</a>
               </div>
             </div>
           </div>
@@ -135,10 +135,10 @@
               </ul>
               <div class="mt-auto d-flex flex-wrap justify-content-between align-items-end gap-3">
                 <div>
-                  <p class="small text-secondary mb-0">170 € × 2 noches</p>
-                  <p class="precio mb-0">340 € <small class="fw-normal text-secondary fs-6">total</small></p>
+                  <p class="small text-secondary mb-0 js-desglose">170 € × 2 noches</p>
+                  <p class="precio mb-0"><span class="js-total">340 €</span> <small class="fw-normal text-secondary fs-6">total</small></p>
                 </div>
-                <a class="btn btn-aurea" href="reserva.html?hab=junior-torreon">Seleccionar</a>
+                <a class="btn btn-aurea js-seleccionar" href="reserva.html?hab=junior-torreon" data-hab="junior-torreon" data-precio="170">Seleccionar</a>
               </div>
             </div>
           </div>
@@ -190,5 +190,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/busqueda.js"></script>
+  <script src="js/disponibles.js"></script>
 </body>
 </html>
